@@ -1,0 +1,42 @@
+{
+  "name": "@example-org/example-typescript",
+  "type": "module",
+  "version": "0.0.1",
+  "author": {
+    "name": "Example Org",
+    "email": "example-org@example-org.com",
+    "url": "https://github.com/example-org"
+  },
+  "license": "MIT",
+  "homepage": "https://example-org.com/pages/en/example-typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example-org/example-repo.git",
+    "directory": "packages/example-typescript"
+  },
+  "keywords": [
+    "example"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "stub": "unbuild --stub",
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
+  }
+}

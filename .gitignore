@@ -1,0 +1,51 @@
+# OS specific
+.Trash/
+.trash/
+.DS_Store
+
+# Logs & temp files
+.temp
+*.log
+
+# IDE
+.idea
+
+# Environments
+*.local
+
+# Build
+dist
+
+# ESLint
+.eslintcache
+
+# Node.js
+node_modules
+.npmrc
+
+# Vite
+.vite-inspect
+
+# Nuxt
+.nuxt
+
+# Vue
+components.d.ts
+
+# Unit tests
+coverage/
+
+# Cloudflare Workers & Pages
+.wrangler
+.dev.vars
+
+# Netlify
+**/.netlify/*
+**/.netlify/functions-serve/*
+
+# VitePress - documentation
+**/.vitepress/docsMetadata.json
+**/.vitepress/cache/
+
+# Obsidian - documentation
+**/.obsidian/

@@ -1,0 +1,64 @@
+{
+  "name": "@example-org/example-vue-component",
+  "type": "module",
+  "version": "0.0.1",
+  "author": {
+    "name": "Example Org",
+    "email": "example-org@example-org.com",
+    "url": "https://github.com/example-org"
+  },
+  "license": "MIT",
+  "homepage": "https://example-org.com/pages/en/example-ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example-org/example-repo.git",
+    "directory": "packages/example-ts"
+  },
+  "keywords": [
+    "example"
+  ],
+  "sideEffects": ["**/*.css"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css",
+    "./*": {
+      "types": "./dist/*",
+      "import": "./dist/*.mjs",
+      "require": "./dist/*.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "*",
+        "dist/*",
+        "dist/*.d.ts",
+        "dist/*/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "README.md",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "dev": "unbuild --stub",
+    "stub": "unbuild --stub",
+    "build": "unbuild",
+    "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vue/tsconfig": "^0.5.1"
+  }
+}
