@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     environment:
       name: Production Docs
       url: https://example-org.com
@@ -29,7 +29,6 @@ jobs:
       - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
-          version: 9
           run_install: false
 
       - name: Get pnpm store directory

@@ -17,7 +17,9 @@
   "keywords": [
     "example"
   ],
-  "sideEffects": ["**/*.css"],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -59,6 +61,6 @@
     "vue": "^3.2.0"
   },
   "devDependencies": {
-    "@vue/tsconfig": "^0.5.1"
+    "@vue/tsconfig": "^0.6.0"
   }
 }

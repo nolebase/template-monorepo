@@ -1,0 +1,12 @@
+version: "0.2"
+ignorePaths: []
+dictionaryDefinitions: []
+dictionaries: []
+words:
+ - hono
+ - unocss
+ - Vite
+ - vitepress
+ - dawidd6
+ignoreWords: []
+import: []

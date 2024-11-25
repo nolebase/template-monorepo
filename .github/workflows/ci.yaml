@@ -36,7 +36,6 @@ jobs:
       - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
-          version: 9
           run_install: false
 
       - name: Get pnpm store directory
@@ -81,7 +80,6 @@ jobs:
       - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
-          version: 9
           run_install: false
 
       - name: Get pnpm store directory
@@ -123,7 +121,6 @@ jobs:
       - uses: pnpm/action-setup@v3
         name: Install pnpm
         with:
-          version: 9
           run_install: false
 
       - name: Get pnpm store directory
