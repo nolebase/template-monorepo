@@ -1,6 +1,6 @@
-import { defineConfig } from 'vitepress'
-
 import { helloWorld } from '@example-org/example-typescript'
+
+import { defineConfig } from 'vitepress'
 import packageJSON from '../../package.json'
 
 // eslint-disable-next-line no-console

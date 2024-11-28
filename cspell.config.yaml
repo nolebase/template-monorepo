@@ -3,10 +3,12 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
- - hono
- - unocss
- - Vite
- - vitepress
- - dawidd6
+  - dawidd6
+  - hono
+  - mkdist
+  - unocss
+  - unplugin
+  - Vite
+  - vitepress
 ignoreWords: []
 import: []

@@ -1,10 +1,10 @@
-import { type Plugin, h } from 'vue'
+import type { InjectionOptions } from '@example-org/example-vue-component'
 
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
-
-import type { InjectionOptions } from '@example-org/example-vue-component'
 import { examplePlugin } from '@example-org/example-vue-component'
+
+import DefaultTheme from 'vitepress/theme'
+import { h, type Plugin } from 'vue'
 
 // During development, we don't need to import the CSS of the monorepo packages
 // since we are using the direct transpiling, bundle, previewing through

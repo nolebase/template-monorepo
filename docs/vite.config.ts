@@ -1,7 +1,7 @@
-import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
-import { defineConfig } from 'vite'
+import { fileURLToPath } from 'node:url'
 import UnoCSS from 'unocss/vite'
+import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
 
 const __filename = fileURLToPath(import.meta.url)
