@@ -30,8 +30,8 @@ importers:
         specifier: ^5.2.0
         version: 5.2.1(vite@6.0.9(@types/node@22.10.3)(jiti@2.4.2)(less@4.2.0)(tsx@4.19.2)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))
       bumpp:
-        specifier: ^9.8.1
-        version: 9.9.2
+        specifier: ^10.0.0
+        version: 10.0.1
       eslint:
         specifier: ^9.15.0
         version: 9.17.0(jiti@2.4.2)
@@ -1707,9 +1707,9 @@ packages:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
 
-  bumpp@9.9.2:
-    resolution: {integrity: sha512-ggRxRV1rWHEyWXnf55UqYzGvttS/Vpkl1zxcNdE5xoYMTHlSgRA0Td4nKn3ckCcMuC+MTgaGQrbKBeyr0V9+Hg==}
-    engines: {node: '>=10'}
+  bumpp@10.0.1:
+    resolution: {integrity: sha512-TBCR4FjNiubf+t6QFncNHJzCDwcz6SM2PPt/UoIGwGoe5ZTbSqu37nNJFlxBngWCUb1rYbf43ocNT1pPaNu5CQ==}
+    engines: {node: '>=18'}
     hasBin: true
 
   bundle-name@4.1.0:
@@ -2961,9 +2961,6 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  package-manager-detector@0.2.5:
-    resolution: {integrity: sha512-3dS7y28uua+UDbRCLBqltMBrbI+A5U2mI9YuxHRxIWYmLj3DwntEBmERYzIAQ4DMeuCUOBSak7dBHHoXKpOTYQ==}
-
   package-manager-detector@0.2.8:
     resolution: {integrity: sha512-ts9KSdroZisdvKMWVAVCXiKqnqNfXz4+IbrBG8/BWx/TR5le+jfenvoBuIZ6UWM9nz47W7AbD9qYfAwfWMIwzA==}
 
@@ -4074,7 +4071,7 @@ snapshots:
 
   '@antfu/install-pkg@0.4.1':
     dependencies:
-      package-manager-detector: 0.2.5
+      package-manager-detector: 0.2.8
       tinyexec: 0.3.1
 
   '@antfu/install-pkg@0.5.0':
@@ -5426,16 +5423,17 @@ snapshots:
 
   builtin-modules@3.3.0: {}
 
-  bumpp@9.9.2:
+  bumpp@10.0.1:
     dependencies:
       c12: 2.0.1
       cac: 6.7.14
       escalade: 3.2.0
       js-yaml: 4.1.0
       jsonc-parser: 3.3.1
+      package-manager-detector: 0.2.8
       prompts: 2.4.2
       semver: 7.6.3
-      tinyexec: 0.3.1
+      tinyexec: 0.3.2
       tinyglobby: 0.2.10
     transitivePeerDependencies:
       - magicast
@@ -5461,7 +5459,7 @@ snapshots:
       ohash: 1.1.4
       pathe: 1.1.2
       perfect-debounce: 1.0.0
-      pkg-types: 1.2.1
+      pkg-types: 1.3.0
       rc9: 2.1.2
 
   cac@6.7.14: {}
@@ -6944,7 +6942,7 @@ snapshots:
       consola: 3.3.3
       execa: 8.0.1
       pathe: 1.1.2
-      pkg-types: 1.2.1
+      pkg-types: 1.3.0
       ufo: 1.5.4
 
   ofetch@1.4.1:
@@ -7000,8 +6998,6 @@ snapshots:
   p-try@2.2.0: {}
 
   package-json-from-dist@1.0.1: {}
-
-  package-manager-detector@0.2.5: {}
 
   package-manager-detector@0.2.8: {}
 
