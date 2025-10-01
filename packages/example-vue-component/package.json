@@ -58,9 +58,9 @@
     "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
   },
   "peerDependencies": {
-    "vue": "^3.5.18"
+    "vue": "^3.5.22"
   },
   "devDependencies": {
-    "@vue/tsconfig": "^0.7.0"
+    "@vue/tsconfig": "^0.8.1"
   }
 }
