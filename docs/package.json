@@ -14,7 +14,7 @@
   "devDependencies": {
     "@example-org/example-typescript": "workspace:^",
     "@example-org/example-vue-component": "workspace:^",
-    "vitepress": "^1.6.3",
-    "vue": "^3.5.18"
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.22"
   }
 }
