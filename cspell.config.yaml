@@ -3,9 +3,12 @@ ignorePaths: []
 dictionaryDefinitions: []
 dictionaries: []
 words:
+  - bumpp
   - dawidd6
   - hono
   - mkdist
+  - nolyfill
+  - taze
   - unocss
   - unplugin
   - Vite

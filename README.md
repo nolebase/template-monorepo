@@ -20,67 +20,43 @@
 4. Replace `example-org.com` with the actual organization domain.
 5. Replace `example-repo` with the actual repository name.
 6. `pnpm install`
-7. `pnpm run packages:stub`
-8. `pnpm run docs:dev`
-9. Change some of the code in the `packages/example-vue-component` and `packages/example-typescript` directories.
-10. To integrate more packages:
+7. `pnpm run dev:docs`
+8. Change some of the code in the `packages/example-vue-component` and `packages/example-typescript` directories.
+9.  To integrate more packages:
    1. Create a new package in the `packages` directory. For example, `packages/example-new-package`.
    2. After completing the development of the new package, run `pnpm run packages:stub` to generate the stubbed files for testing and importing.
    3. Install the new package in the `docs` directory. `pnpm install -F @example-org/docs @example-org/example-new-package`.
    4. If it's a pure TypeScript module without the need to integrate to run after any extra bundling (Vite, `vite-node`, etc.), you can now import the new package in the `docs` directory. For example, `import { yourExportedField } from '@example-org/example-new-package'`.
-   5. If it's a Vue component, or a module that requires bundling and transforming, you need to add the new package to the `docs/vite.config.ts` file as `alias`, `tsconfig.json` as `paths` in order to import the new package in the `docs` directory. Once you are done, you can import the new package in the `docs` directory. For example, `import { yourExportedField } from '@example-org/example-new-package'`.
-11. Build the packages, `pnpm run packages:build`.
-12. Build the documentation, `pnpm run docs:build`.
-13. Publish the packages, `pnpm run packages:publish`.
+   5. If it's a Vue component, or a module that requires bundling and transforming, you need to add the new package to the `docs/.vitepress/config.ts` file as `alias`, `tsconfig.json` as `paths` in order to import the new package in the `docs` directory under `vite` property. Once you are done, you can import the new package in the `docs` directory. For example, `import { yourExportedField } from '@example-org/example-new-package'`.
+10. Build the packages, `pnpm run build:packages`.
+11. Build the documentation, `pnpm run build:docs`.
+12. Publish the packages, `pnpm publish -r --access public --no-git-checks`.
 
 ## How to develop
 
-The project uses [`unbuild`](https://github.com/unjs/unbuild) and [`vite`](https://github.com/vitejs/vite) to develop and build. With the powerful features offered from [`jiti`](https://github.com/unjs/jiti), we no longer need to use [Rollup](https://rollupjs.org/) for tedious configuration and then watch the local file changes and bundle the modified and developed the modules without [`vite`](https://github.com/vitejs/vite) for hot-reload. We can directly run the following command to output the bundled file and get started on development:
-
 ```shell
-pnpm run packages:stub
+git clone git@github.com:example-org/example-repo.git
+cd example-repo
+pnpm install
+pnpm run dev:docs
 ```
 
 If you use [`@antfu/ni`](https://github.com/antfu/ni), you can also use the following command:
 
 ```shell
-nr packages:stub
-```
-
-Next, you need to start the the documentation site (with VitePress) for previewing and development. You can use the following command:
-
-```shell
-pnpm run docs:dev
-```
-
-If you use [`@antfu/ni`](https://github.com/antfu/ni), you can also use the following command:
-
-```shell
-nr docs:dev
-```
-
-## How to build
-
-```shell
-pnpm run packages:build
-```
-
-If you use [`@antfu/ni`](https://github.com/antfu/ni), you can also use the following command:
-
-```shell
-nr packages:build
+nr dev:docs
 ```
 
 To build the documentation and preview site, you can use the following command:
 
 ```shell
-pnpm run docs:build
+pnpm run build:docs
 ```
 
 If you use [`@antfu/ni`](https://github.com/antfu/ni), you can also use the following command:
 
 ```shell
-nr docs:build
+nr build:docs
 ```
 
 ### Written with ♥

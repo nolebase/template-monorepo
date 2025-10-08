@@ -4,17 +4,18 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "pnpm run docs:dev",
-    "build": "pnpm run docs:build",
-    "preview": "pnpm run docs:preview",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "dev": "pnpm run dev:docs",
+    "build": "pnpm run build:docs",
+    "preview": "pnpm run preview:docs",
+    "dev:docs": "vitepress dev",
+    "preview:docs": "vitepress preview",
+    "build:docs": "vitepress build"
   },
   "devDependencies": {
     "@example-org/example-typescript": "workspace:^",
     "@example-org/example-vue-component": "workspace:^",
-    "vitepress": "^1.6.4",
+    "@vue/tsconfig": "^0.8.1",
+    "vitepress": "^2.0.0-alpha.12",
     "vue": "^3.5.22"
   }
 }

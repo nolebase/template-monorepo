@@ -1,10 +1,10 @@
 import type { InjectionOptions } from '@example-org/example-vue-component'
-
 import type { Theme } from 'vitepress'
 import type { Plugin } from 'vue'
 
-import { examplePlugin } from '@example-org/example-vue-component'
 import DefaultTheme from 'vitepress/theme'
+
+import { examplePlugin } from '@example-org/example-vue-component'
 import { h } from 'vue'
 
 // During development, we don't need to import the CSS of the monorepo packages
@@ -12,7 +12,6 @@ import { h } from 'vue'
 // Vite instead of bundle them all each time we edit files.
 //
 // import '@example-org/example-vue-component/style.css'
-
 import 'virtual:uno.css'
 
 export default {

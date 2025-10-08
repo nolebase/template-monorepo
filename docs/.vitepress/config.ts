@@ -1,6 +1,11 @@
-import { helloWorld } from '@example-org/example-typescript'
+import { join, resolve } from 'node:path'
 
+import UnoCSS from 'unocss/vite'
+import Inspect from 'vite-plugin-inspect'
+
+import { helloWorld } from '@example-org/example-typescript'
 import { defineConfig } from 'vitepress'
+
 import packageJSON from '../../package.json'
 
 // eslint-disable-next-line no-console
@@ -8,6 +13,22 @@ console.log(helloWorld())
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        '@example-org/example-vue-component': resolve(join(import.meta.dirname, '..', '..', 'packages', 'example-vue-component', 'src')),
+      },
+    },
+    optimizeDeps: {
+      exclude: [
+        'vitepress',
+      ],
+    },
+    plugins: [
+      UnoCSS(),
+      Inspect(),
+    ],
+  },
   lastUpdated: true,
   ignoreDeadLinks: [
     // Site Config | VitePress

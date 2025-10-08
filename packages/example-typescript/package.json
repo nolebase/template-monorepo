@@ -19,14 +19,14 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "default": "./dist/index.mjs"
     }
   },
-  "main": "dist/index.cjs",
+  "main": "dist/index.mjs",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "types": "dist/index.d.mts",
   "files": [
     "LICENSE",
     "README.md",
@@ -34,9 +34,6 @@
     "package.json"
   ],
   "scripts": {
-    "stub": "unbuild --stub",
-    "dev": "unbuild --stub",
-    "build": "unbuild",
-    "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
+    "build": "tsdown"
   }
 }

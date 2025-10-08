@@ -22,27 +22,27 @@
   ],
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "default": "./dist/index.mjs"
     },
     "./style.css": "./dist/style.css",
     "./*": {
       "types": "./dist/*",
       "import": "./dist/*.mjs",
-      "require": "./dist/*.js"
+      "default": "./dist/*.mjs"
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/index.d.mts",
   "typesVersions": {
     "*": {
       "*": [
         "*",
         "dist/*",
-        "dist/*.d.ts",
-        "dist/*/index.d.ts"
+        "dist/*.d.mts",
+        "dist/*/index.d.mts"
       ]
     }
   },
@@ -52,10 +52,7 @@
     "package.json"
   ],
   "scripts": {
-    "dev": "unbuild --stub",
-    "stub": "unbuild --stub",
-    "build": "unbuild",
-    "package:publish": "pnpm build && pnpm publish --access public --no-git-checks"
+    "build": "tsdown"
   },
   "peerDependencies": {
     "vue": "^3.5.22"
