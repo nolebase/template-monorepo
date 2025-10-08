@@ -46,10 +46,10 @@ jobs:
       - run: pnpm install --frozen-lockfile
 
       - run: pnpm build:packages
-        # env:
-          # As suggested in Verbose Build option to be able to track down errors https://github.com/vuejs/vitepress/issues/422
-          # VitePress build command does not have --debug option, so we need to set it manually where the debug package is used.
-          # DEBUG: '*'
+      # env:
+      # As suggested in Verbose Build option to be able to track down errors https://github.com/vuejs/vitepress/issues/422
+      # VitePress build command does not have --debug option, so we need to set it manually where the debug package is used.
+      # DEBUG: '*'
 
       - run: pnpm build:docs
 
