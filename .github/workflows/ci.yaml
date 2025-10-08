@@ -25,8 +25,7 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
       # Turborepo
       - name: Cache turbo build setup
@@ -43,11 +42,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
 
-      - name: Build packages
-        run: pnpm run build:packages
+      - run: pnpm install --frozen-lockfile
 
-      - name: Test
-        run: pnpm run test:run
+      - run: pnpm run test:run
 
   lint:
     strategy:
@@ -58,8 +55,7 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
       # Turborepo
       - name: Cache turbo build setup
@@ -76,11 +72,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
 
-      - name: Lint
-        run: pnpm run lint
+      - run: pnpm run lint
 
   packages-build-test:
     strategy:
@@ -91,8 +85,7 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
       # Turborepo
       - name: Cache turbo build setup
@@ -109,8 +102,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
 
-      - name: Build packages
-        run: pnpm run packages:build
+      - run: pnpm run build:packages

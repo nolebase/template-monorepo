@@ -13,8 +13,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
 
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v5
@@ -22,11 +21,9 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
 
-      - name: Packages build
-        run: pnpm run build:packages
+      - run: pnpm run build:packages
 
       - run: pnpm publish -r --access public --no-git-checks --dry-run
         env:

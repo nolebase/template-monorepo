@@ -16,8 +16,7 @@ jobs:
       name: Production Docs
       url: https://example-org.com
     steps:
-      - name: Checkout
-        uses: actions/checkout@v5
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -27,11 +26,9 @@ jobs:
           node-version: lts/*
           cache: pnpm
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile
 
-      - name: Build docs
-        run: |
+      - run: |
           pnpm build:packages
           pnpm build:docs
         env:
@@ -40,14 +37,12 @@ jobs:
           # DEBUG: 'vitepress:*'
           VUE_PROD_HYDRATION_MISMATCH_DETAILS_FLAG: '1'
 
-      - name: Install Netlify CLI
-        run: pnpm install -g netlify-cli
+      - run: pnpm install -g netlify-cli
 
       - name: Push to Netlify
         timeout-minutes: 10
         working-directory: docs/
-        run: |
-          netlify deploy --dir 'docs/.vitepress/dist' --prod --debug
+        run: netlify deploy --dir 'docs/.vitepress/dist' --prod --debug
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
