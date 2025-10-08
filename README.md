@@ -24,7 +24,7 @@
 8. Change some of the code in the `packages/example-vue-component` and `packages/example-typescript` directories.
 9.  To integrate more packages:
    1. Create a new package in the `packages` directory. For example, `packages/example-new-package`.
-   2. After completing the development of the new package, run `pnpm run packages:stub` to generate the stubbed files for testing and importing.
+   2. After completing the development of the new package, run `pnpm install` to rebuild for testing and importing.
    3. Install the new package in the `docs` directory. `pnpm install -F @example-org/docs @example-org/example-new-package`.
    4. If it's a pure TypeScript module without the need to integrate to run after any extra bundling (Vite, `vite-node`, etc.), you can now import the new package in the `docs` directory. For example, `import { yourExportedField } from '@example-org/example-new-package'`.
    5. If it's a Vue component, or a module that requires bundling and transforming, you need to add the new package to the `docs/.vitepress/config.ts` file as `alias`, `tsconfig.json` as `paths` in order to import the new package in the `docs` directory under `vite` property. Once you are done, you can import the new package in the `docs` directory. For example, `import { yourExportedField } from '@example-org/example-new-package'`.
