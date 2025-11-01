@@ -29,7 +29,7 @@
     "nolyfill": "pnpm dlx nolyfill"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.4.1",
+    "@antfu/eslint-config": "^6.2.0",
     "@types/node": "^24.7.0",
     "@unocss/cli": "^66.5.2",
     "@unocss/eslint-config": "^66.5.2",
