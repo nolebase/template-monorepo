@@ -15,7 +15,7 @@
     "@example-org/example-typescript": "workspace:^",
     "@example-org/example-vue-component": "workspace:^",
     "@vue/tsconfig": "^0.8.1",
-    "vitepress": "^2.0.0-alpha.12",
-    "vue": "^3.5.22"
+    "vitepress": "^2.0.0-alpha.15",
+    "vue": "^3.5.25"
   }
 }
