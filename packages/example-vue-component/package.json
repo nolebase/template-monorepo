@@ -55,7 +55,7 @@
     "build": "tsdown"
   },
   "peerDependencies": {
-    "vue": "^3.5.22"
+    "vue": "^3.5.25"
   },
   "devDependencies": {
     "@vue/tsconfig": "^0.8.1"
