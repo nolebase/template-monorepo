@@ -33,7 +33,7 @@ jobs:
           name: pr-num
           path: ./pr_num
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
