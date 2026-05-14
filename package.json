@@ -44,7 +44,7 @@
     "unocss": "^66.5.9",
     "unplugin-unused": "^0.5.6",
     "unplugin-vue": "^7.0.8",
-    "vite": "^7.2.4",
+    "vite": "^8.0.13",
     "vite-plugin-inspect": "^11.3.3",
     "vitest": "^4.0.14",
     "vue": "^3.5.25",
