@@ -36,7 +36,7 @@
     "@unocss/eslint-plugin": "^66.5.9",
     "@vitejs/plugin-vue": "^6.0.2",
     "bumpp": "^10.3.2",
-    "eslint": "^9.39.1",
+    "eslint": "^10.4.0",
     "taze": "^19.9.2",
     "tsdown": "^0.16.8",
     "turbo": "^2.6.1",
