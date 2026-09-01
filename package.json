@@ -2,7 +2,7 @@
   "name": "@example-org/example-repo",
   "type": "module",
   "version": "0.0.1",
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@11.25.0",
   "author": {
     "name": "Example Org",
     "email": "example-org@example-org.com",
